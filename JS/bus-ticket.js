@@ -125,6 +125,12 @@ for(let i=0; i<getButtonByClassName.length; i++){
         seatPrice.appendChild(h3);
     });
 
+    const nextButton = document.getElementById('next-btn');
+
+    nextButton.addEventListener('click',function(){
+        // alert('success!');
+    });
+
 }
 
 
