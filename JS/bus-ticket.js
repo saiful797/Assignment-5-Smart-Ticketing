@@ -73,7 +73,7 @@ for(let i=0; i<getButtonByClassName.length; i++){
 
                     applyBtn.addEventListener('click',function(){
                         const couponCode = document.getElementById('coupon-code').value.split(" ").join("").toUpperCase();
-                        console.log(couponCode);
+                        //console.log(couponCode);
                         //console.log(couponCode);
 
                         if(couponCode ==='NEW15'){
@@ -107,11 +107,8 @@ for(let i=0; i<getButtonByClassName.length; i++){
                     applyBtn.disabled = true;
                     applyBtn.style.backgroundColor = "";
                 }
-            
-                h2.innerText ="Economy";
-                h3.innerText ="550";
-                totalPrice += 550;
             }
+
         }
 
         inTotalPrice.innerText = totalPrice;
@@ -123,12 +120,6 @@ for(let i=0; i<getButtonByClassName.length; i++){
         seatItem.appendChild(h1);
         seatClass.appendChild(h2);
         seatPrice.appendChild(h3);
-    });
-
-    const nextButton = document.getElementById('next-btn');
-
-    nextButton.addEventListener('click',function(){
-        // alert('success!');
     });
 
 }
