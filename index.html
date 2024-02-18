@@ -228,10 +228,13 @@
                             <img src="images/seat-gray.png" alt="">
                             <h2 class="text-lg font-medium">Available Seat</h2>
                         </div>
-                        <div class="flex gap-2">
+                        <div id="selected-seatGray" class="flex gap-2">
                             <img src="images/seat-gray.png" alt="">
-                            <img src="images/seat-green-filled.png" class="hidden" alt="">
                             <h2 class="text-lg font-medium">Selected</h2>
+                        </div>
+                        <div id="selected-seatGreen" class="flex gap-2 hidden">
+                            <img src="images/seat-green-filled.png" alt="">
+                            <h2 class="text-lg font-medium text-[#1DD100]">Selected</h2>
                         </div>
                     </div>
                     <hr>
@@ -384,7 +387,7 @@
                 </div>
 
                 <!-- Selected Seat Price -->
-                <div class="mt-10 space-y-4 md:mt-0 w-full lg:w-1/2 lg:p-10">
+                <div class=" space-y-4 md:mt-0 w-full lg:w-1/2 lg:p-10">
                     <div class="text-left ">
                         <h1 class="text-2xl font-medium">Select Your Seat</h1>
                     </div>
@@ -392,24 +395,23 @@
                     <div class="space-y-4 rounded-3xl p-3 md:p-10 bg-gray-200">
                         <div  class="flex justify-between">
                             <div id="seat-item" class="space-y-2 text-lg">
-                                <h3 class="text-xl font-medium">Seat</h3>
-                                
+                                <h3 class="text-xl font-medium">Seat <sup id="seat-count" class="text-[#1DD100] text-lg rounded-full ">0</sup></h3>
                             </div>
 
                             <div id="seat-class" class="space-y-2 text-lg">
-                                <h3>Class</h3>
+                                <h3 class="text-xl font-medium">Class</h3>
                             </div>
                             
                             <div id="seat-price" class="space-y-2 text-lg">
-                                <h3>Price</h3>
+                                <h3 class="text-xl font-medium">Price</h3>
                             </div>
                         </div>
 
                         <hr class="bg-[#060606] h-[2px]">
 
                         <div class="flex justify-between">
-                            <h4>Total Price</h4>
-                            <p>BDT <span>0</span></p>
+                            <h4 class="text-lg font-medium">Total Price</h4>
+                            <p class="text-lg font-medium">BDT <span id="total-price">0</span></p>
                         </div>
                         <div class="">
                             <label class="input input-bordered flex items-center gap-2">
@@ -418,8 +420,8 @@
                             </label>
                         </div>
                         <div class="flex justify-between">
-                            <h1>Grand Total</h1>
-                            <p>BDT <span>110</span></p>
+                            <h1 class="text-lg font-medium">Grand Total</h1>
+                            <p class="text-lg font-medium" >BDT <span id="grand-total">0</span></p>
                             
                         </div>
                     </div>
