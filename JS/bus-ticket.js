@@ -50,8 +50,8 @@ for(let i=0; i<getButtonByClassName.length; i++){
         
         if(totalSeat === 4){
             seat.disabled = true;
-            seat.style.backgroundColor = "";
-            alert("Your limit is completed!");
+            //seat.style.backgroundColor = "";
+            alert("Your limit have completed!");
         }
 
         else{
@@ -64,7 +64,34 @@ for(let i=0; i<getButtonByClassName.length; i++){
                 seat.style.backgroundColor = "#1DD100";
                 
                 // Apply coupon btn
-                if(totalSeat === 4) applyBtn.style.backgroundColor = "#1DD100";
+                if(totalSeat === 4){
+                    applyBtn.disabled = false;
+                    applyBtn.style.backgroundColor = "#1DD100";
+
+
+                    // Apply coupon code
+
+                    applyBtn.addEventListener('click',function(){
+                        const couponCode = document.getElementById('coupon-code').value.split(" ").join("").toUpperCase();
+                        //console.log(couponCode);
+
+                        if(couponCode ==='NEW15'){
+                            const discountPrice = totalPrice - (totalPrice * 0.15);
+                            const couponApplied = document.getElementById('coupon-applied');
+                            const discountPrices = document.getElementById('discount-price');
+                            const discountPriceElement = document.getElementById('discount');
+
+                            grandtotal.innerText = discountPrice;
+                            discountPriceElement.innerText = totalPrice * 0.15;
+                            couponApplied.classList.add('hidden');
+                            discountPrices.classList.remove('hidden');
+                        }
+                    });
+                }
+                else{
+                    applyBtn.disabled = true;
+                    applyBtn.style.backgroundColor = "";
+                }
             
                 h2.innerText ="Economy";
                 h3.innerText ="550";
