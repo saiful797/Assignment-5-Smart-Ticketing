@@ -27,10 +27,12 @@ for(let i=0; i<getButtonByClassName.length; i++){
         const seatItem = document.getElementById('seat-item');
         const seatClass = document.getElementById('seat-class');
         const seatPrice = document.getElementById('seat-price');
+
         const inTotalPrice = document.getElementById('total-price');
         const seatCount = document.getElementById('seat-count');
         const grandtotal = document.getElementById('grand-total');
         const seatsLeft = document.getElementById('seats-left');
+        const applyBtn= document.getElementById('apply-btn');
 
         //hide graySet and show green seat
         const graySeat = document.getElementById('selected-seatGray');
@@ -60,12 +62,16 @@ for(let i=0; i<getButtonByClassName.length; i++){
                 h1.innerText = seat.querySelector("h5").innerText;
                 // Change the background color when clicked
                 seat.style.backgroundColor = "#1DD100";
+                
+                // Apply coupon btn
+                if(totalSeat === 4) applyBtn.style.backgroundColor = "#1DD100";
             
                 h2.innerText ="Economy";
                 h3.innerText ="550";
                 totalPrice += 550;
             }
         }
+
         inTotalPrice.innerText = totalPrice;
         seatCount.innerText = totalSeat;
         grandtotal.innerText = totalPrice;
