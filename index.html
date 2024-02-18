@@ -54,8 +54,48 @@
         </nav>
 
         <!-- Banner Section -->
-        <div>
+        <div class="relative">
+            <div class="carousel w-full p-3 mt-3 relative">
+                <div id="slide1" class="carousel-item relative w-full">
+                  <img src="images/banner.png" class="w-full" />
+                </div> 
 
+                <div class="absolute top-5 lg:top-28 left-14 lg:left-1/4">
+                    <div class="text-white text-xl md:text-5xl font-medium md:space-y-3 text-center">
+                        <h3>End-to-End Travel with</h3>
+                        <h4 class="text-[#1DD100] md:p-3">P Paribahan</h4>
+                        <p class="w-2/3 mx-auto text-xs font-normal pb-3">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+                        <button class="btn bg-[#1DD100] border-[#1DD100] text-xl">Buy Tickets</button>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute flex-col-1 md:flex justify-around space-y-4 md:space-y-0 w-full m-3 md:-bottom-16 md:left-0">
+
+                <div class="bg-white flex m-3 md:m-0 gap-3 rounded-xl md:rounded-3xl p-10 md:p-3 shadow shadow-[#1DD100]">
+                    <img src="images/people.png" alt="">
+                    <div class="pl-10">
+                        <h1 class="text-lg lg:text-2xl font-semibold">500K+</h1>
+                        <p>Registered users</p>
+                    </div>
+                </div>
+
+                <div class="bg-white flex m-3 md:m-0 gap-3 rounded-xl md:rounded-3xl p-10 md:p-3 shadow shadow-[#1DD100]">
+                    <img src="images/ticket-cupon.png" alt="">
+                    <div class="pl-10">
+                        <h1 class="text-lg lg:text-2xl font-semibold">1.7 lacks</h1>
+                        <p>Registered users</p>
+                    </div>
+                </div>
+
+                <div class="bg-white flex m-2 md:m-0 gap-3 rounded-xl md:rounded-3xl p-10 md:p-3 shadow shadow-[#1DD100]">
+                    <img src="images/stoppage.png" class="md:w-20 h-20" alt="">
+                    <div class="pl-10">
+                        <h1 class="text-lg lg:text-2xl font-semibold">80K+</h1>
+                        <p>Rental partners</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </header>
     <!-- Header Section End -->
@@ -64,7 +104,7 @@
     <!-- Main Section Start -->
     <main>
         <!-- Coupon Section Start-->
-        <section class="container p-3 md:p-8 gap-10 flex-col-1 lg:flex  justify-between">
+        <section class="container md:mt-20 mt-[520px] lg:mt-10 p-3 md:p-8 gap-10 flex-col-1 lg:flex  justify-between">
             <div class="relative flex justify-between p-8 bg-[#FFBF0F] gap-6 rounded-xl w-full">
                 <div class="w-10 h-10 -top-4 right-[45%] md:right-[40%] bg-white rounded-full absolute">
 
@@ -153,7 +193,7 @@
                             <p>9:00 PM</p>
                         </div>
                         <hr>
-                        <div class="flex-col-1 md:flex  space-y-5 md:space-y-0 text-center justify-between h-40 lg:h-10 mt-3 mb-5">
+                        <div class="flex-col-1 lg:flex md:space-x-3 lg:space-x-0  space-y-5 lg:space-y-0 text-center justify-between h-40 lg:h-10 mt-3 mb-5">
                             <button class="btn w-40 bg-green-200 border-none">Boarding Point - Laxmipur</button>
                             <button class="btn w-40 bg-green-200 border-none">Dropping Point - Bogura</button>
                             <button class="btn w-40 bg-green-200 border-none">Est. Time - 11 Hour</button>
@@ -344,12 +384,12 @@
                 </div>
 
                 <!-- Selected Seat Price -->
-                <div class="mt-10 space-y-4 md:mt-0 w-1/2">
+                <div class="mt-10 space-y-4 md:mt-0 w-full lg:w-1/2 lg:p-10">
                     <div class="text-left ">
                         <h1 class="text-2xl font-medium">Select Your Seat</h1>
                     </div>
                     <hr>
-                    <div class="space-y-4 rounded-3xl p-10 bg-gray-200">
+                    <div class="space-y-4 rounded-3xl p-3 md:p-10 bg-gray-200">
                         <div class="flex justify-between text-xl font-medium">
                             <h2>Seat</h2>
                             <h3>Class</h3>
@@ -364,8 +404,8 @@
                         </div>
                         <div class="">
                             <label class="input input-bordered flex items-center gap-2">
-                                <input type="text" class="grow " placeholder="Have any coupon?"/>
-                                <button class="btn w-28">Apply</button>
+                                <input type="text" class="grow" placeholder="Have any coupon?"/>
+                                <button class="btn text-xs">Apply</button>
                             </label>
                         </div>
                         <div class="flex justify-between">
@@ -399,6 +439,11 @@
 
                         <button class="btn w-full rounded-full bg-[#1DD100] text-xl text-white font-medium" type="submit">Next</button>
                     </form>
+
+                    <div class="flex justify-between pt-5 md:pt-10">
+                        <a href="#" class="text-[#222521] font-medium"><u>Terms and Conditions</u></a>
+                        <a href="#" class="text-[#222521] font-medium"><u>Cancellation Policy</u></a>
+                    </div>
                 </div>
             </div>
         </section>
