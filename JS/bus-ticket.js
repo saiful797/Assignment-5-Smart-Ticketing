@@ -30,6 +30,7 @@ for(let i=0; i<getButtonByClassName.length; i++){
         const inTotalPrice = document.getElementById('total-price');
         const seatCount = document.getElementById('seat-count');
         const grandtotal = document.getElementById('grand-total');
+        const seatsLeft = document.getElementById('seats-left');
 
         //hide graySet and show green seat
         const graySeat = document.getElementById('selected-seatGray');
@@ -68,6 +69,7 @@ for(let i=0; i<getButtonByClassName.length; i++){
         inTotalPrice.innerText = totalPrice;
         seatCount.innerText = totalSeat;
         grandtotal.innerText = totalPrice;
+        seatsLeft.innerText = 40 - totalSeat;
 
 
         seatItem.appendChild(h1);
