@@ -73,6 +73,7 @@ for(let i=0; i<getButtonByClassName.length; i++){
 
                     applyBtn.addEventListener('click',function(){
                         const couponCode = document.getElementById('coupon-code').value.split(" ").join("").toUpperCase();
+                        console.log(couponCode);
                         //console.log(couponCode);
 
                         if(couponCode ==='NEW15'){
@@ -86,6 +87,20 @@ for(let i=0; i<getButtonByClassName.length; i++){
                             couponApplied.classList.add('hidden');
                             discountPrices.classList.remove('hidden');
                         }
+
+                        else if(couponCode ==='COUPLE20'){
+                            const discountPrice = totalPrice - (totalPrice * 0.2);
+                            const couponApplied = document.getElementById('coupon-applied');
+                            const discountPrices = document.getElementById('discount-price');
+                            const discountPriceElement = document.getElementById('discount');
+
+                            grandtotal.innerText = discountPrice;
+                            discountPriceElement.innerText = totalPrice * 0.2;
+                            couponApplied.classList.add('hidden');
+                            discountPrices.classList.remove('hidden');
+                        }
+                        
+                        else alert('Invalid Coupon!!');
                     });
                 }
                 else{
