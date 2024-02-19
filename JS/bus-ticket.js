@@ -9,15 +9,14 @@ buyTickets.addEventListener('click', function(){
     
 });
 
-//Select seats and Buy seats
 
+//Select seats and Buy seats
 let totalPrice = 0;
 let totalSeat = 0;
 let counter = 0;
 let seats = [];
 
 const getButtonByClassName = document.querySelectorAll(".btn-seat");
-// console.log(getButtonByClassName);
 
 for(let i=0; i<getButtonByClassName.length; i++){
     const seat = getButtonByClassName[i];
@@ -50,7 +49,6 @@ for(let i=0; i<getButtonByClassName.length; i++){
         
         if(totalSeat === 4){
             seat.disabled = true;
-            //seat.style.backgroundColor = "";
             alert("Your limit have completed!");
         }
 
@@ -107,6 +105,22 @@ for(let i=0; i<getButtonByClassName.length; i++){
                     applyBtn.disabled = true;
                     applyBtn.style.backgroundColor = "";
                 }
+
+                h2.innerText ="Economy";
+                h3.innerText ="550";
+                totalPrice += 550;
+
+                const nextButton = document.getElementById('next-btn');
+                nextButton.addEventListener('click', function(){
+                    my_modal_5.showModal();
+
+                    const modalClose = document.getElementById('modal-close');
+
+                    modalClose.addEventListener('click', function(){
+                        location.reload();
+                        window.scrollTo(0,0);
+                    })
+                });
             }
 
         }
