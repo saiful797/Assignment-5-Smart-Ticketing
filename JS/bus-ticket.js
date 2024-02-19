@@ -9,6 +9,15 @@ buyTickets.addEventListener('click', function(){
     
 });
 
+// Apply Button Disable
+const applyBtn= document.getElementById('apply-btn');
+applyBtn.disabled = true;
+applyBtn.style.backgroundColor = "";
+
+//next button disabled
+const nextButtonEvent = document.getElementById('next-btn');
+nextButtonEvent.disabled =true;
+nextButtonEvent.style.backgroundColor = " ";
 
 //Select seats and Buy seats
 let totalPrice = 0;
@@ -56,6 +65,11 @@ for(let i=0; i<getButtonByClassName.length; i++){
             if(findSeat === -1){
                 totalSeat += 1;
                 seats.push(seat.innerText);
+
+                if(totalSeat === 1){
+                    nextButtonEvent.disabled = false;
+                    nextButtonEvent.style.backgroundColor = "#1DD100";
+                }
     
                 h1.innerText = seat.querySelector("h5").innerText;
                 // Change the background color when clicked
@@ -70,9 +84,7 @@ for(let i=0; i<getButtonByClassName.length; i++){
                     // Apply coupon code
 
                     applyBtn.addEventListener('click',function(){
-                        const couponCode = document.getElementById('coupon-code').value.split(" ").join("").toUpperCase();
-                        //console.log(couponCode);
-                        //console.log(couponCode);
+                        const couponCode = document.getElementById('coupon-code').value;
 
                         if(couponCode ==='NEW15'){
                             const discountPrice = totalPrice - (totalPrice * 0.15);
@@ -86,7 +98,7 @@ for(let i=0; i<getButtonByClassName.length; i++){
                             discountPrices.classList.remove('hidden');
                         }
 
-                        else if(couponCode ==='COUPLE20'){
+                        else if(couponCode ==='Couple 20'){
                             const discountPrice = totalPrice - (totalPrice * 0.2);
                             const couponApplied = document.getElementById('coupon-applied');
                             const discountPrices = document.getElementById('discount-price');
@@ -98,19 +110,19 @@ for(let i=0; i<getButtonByClassName.length; i++){
                             discountPrices.classList.remove('hidden');
                         }
                         
-                        else alert('Invalid Coupon!!');
+                        else{
+                            alert('Invalid Coupon!!');
+                        };
                     });
-                }
-                else{
-                    applyBtn.disabled = true;
-                    applyBtn.style.backgroundColor = "";
                 }
 
                 h2.innerText ="Economy";
                 h3.innerText ="550";
                 totalPrice += 550;
 
+                // Next Button Event
                 const nextButton = document.getElementById('next-btn');
+
                 nextButton.addEventListener('click', function(){
                     my_modal_5.showModal();
 
