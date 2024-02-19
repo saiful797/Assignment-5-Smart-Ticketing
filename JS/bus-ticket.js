@@ -58,11 +58,19 @@ for(let i=0; i<getButtonByClassName.length; i++){
         
         if(totalSeat === 4){
             seat.disabled = true;
-            alert("Your limit have completed!");
+            if(findSeat !== -1){
+                seat.disabled = false;
+                alert('The seat was selected!');
+            }
+            else alert("Your limit have completed!");
         }
 
         else{
-            if(findSeat === -1){
+            if(findSeat !== -1){
+                seat.disabled = false;
+                alert('The seat was selected!');
+            }
+            else if(findSeat === -1){
                 totalSeat += 1;
                 seats.push(seat.innerText);
 

@@ -1,4 +1,4 @@
-// Use for Tailwind CSS
+// Use for Tailwind CSS and DaisyUI
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: ["./src/**/*.{html,js}"],
