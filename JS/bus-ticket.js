@@ -75,14 +75,13 @@ for(let i=0; i<getButtonByClassName.length; i++){
                 // Change the background color when clicked
                 seat.style.backgroundColor = "#1DD100";
                 
-                // Apply coupon btn
+                // Apply Coupon Button
                 if(totalSeat === 4){
                     applyBtn.disabled = false;
                     applyBtn.style.backgroundColor = "#1DD100";
 
 
                     // Apply coupon code
-
                     applyBtn.addEventListener('click',function(){
                         const couponCode = document.getElementById('coupon-code').value;
 
@@ -120,7 +119,7 @@ for(let i=0; i<getButtonByClassName.length; i++){
                 h3.innerText ="550";
                 totalPrice += 550;
 
-                // Next Button Event
+                // Next Button Event Section
                 const nextButton = document.getElementById('next-btn');
 
                 nextButton.addEventListener('click', function(){
